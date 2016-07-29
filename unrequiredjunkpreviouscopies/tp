@@ -1,0 +1,67 @@
+         <div class="row">
+
+            <div class="col-lg-12">
+                <h3 class="page-header"> Some of the products</h3>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="ProductUroworld1.php">
+                    <img class="img-responsive img-hover img-related" src="<?php 
+
+$res = $conn->query("Select * from info where name='Bi-polar Loop'");
+while($row=$res->fetch_assoc())
+        {   
+$cell1=$row['image'];
+echo $cell1;
+}?>" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="ProductUroworld2.php">
+                    <img class="img-responsive img-hover img-related" src="<?php 
+
+$res = $conn->query("Select * from info where name='Bladder Evacuator'");
+while($row=$res->fetch_assoc())
+        {   
+$cell1=$row['image'];
+echo $cell1;
+}?>" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="ProductUroworld3.php">
+                    <img class="img-responsive img-hover img-related" src="<?php 
+
+$res = $conn->query("Select * from info where name='Ureteral Balloon Dilator'");
+while($row=$res->fetch_assoc())
+        {   
+$cell1=$row['image'];
+echo $cell1;
+}?>" alt="">
+                </a>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <a href="ProductUroworld4.php">
+                    <img class="img-responsive img-hover img-related" src="<?php 
+
+$res = $conn->query("Select * from info where name='Dual Lumen Catheter'");
+while($row=$res->fetch_assoc())
+        {   
+$cell1=$row['image'];
+echo $cell1;
+}
+
+?>" alt=""
+
+>
+                </a>
+            </div>
+</div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>

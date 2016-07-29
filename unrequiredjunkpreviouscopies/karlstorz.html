@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>UroWorld</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    </head>
+
+<body>
+<?php 
+$host="localhost"; //or the web server
+    $username="root";
+    $password="";
+    $database ="anand";
+
+// Create connection
+    $conn = new mysqli($host, $username, $password, $database);
+// Check connection
+    if ($conn->connect_error) {
+        die('Can\'t use' . DB_NAME . ':' . mysql_error());
+
+    }
+    
+?>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="homepage.html">UROworld</a>
+            </div>
+             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a href="services.html">Services</a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Products <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="ProductUroworld.html">Uroworld</a>
+                            </li>
+                            <li>
+                                <a href="karlstorz.html">Karlstorz</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">Mindray</a>
+                            </li>
+                            
+                           </ul>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                    
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Karlstorz
+                    <small>The World of endoscopy</small>
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="index.html">Home</a>
+                    </li>
+                    <li class="active">Karlstorz</li>
+                </ol>
+                
+				 <div class="row">
+            <div class="col-md-7">
+                <img src="
+<?php 
+
+$res = $conn->query("Select * from info where name='mainbody'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['image'];
+echo $cell1;
+}?>
+
+                " alt="">
+            </div>
+            <div class="col-md-5">
+                 <?php 
+
+$res = $conn->query("Select * from info where name='mainbody'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['description'];
+echo $cell1;
+}?>
+
+			  
+			  </div>
+        </div>
+				
+				
+				
+              
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    
+ <?php 
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['name'];
+echo $cell1;
+}?>
+                                </a>
+                            </h4>
+                        </div>
+                         <div id="collapseOne" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                <!-- /.row -->
+        <div class="row">
+            <div class="col-md-7">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="
+
+<?php 
+
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['image'];
+echo $cell1;
+}?>
+                    " alt="bipolar loop">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <?php 
+
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['description'];
+echo $cell1;
+}?>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+
+
+ <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                    <?php 
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['name'];
+echo $cell1;
+}?>
+ 
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-7">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="
+<?php 
+
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['image'];
+echo $cell1;
+}?>
+
+                    " alt="Surgical Forceps">
+                </a>
+            </div>
+            <div class="col-md-5">
+                 <?php 
+
+$res = $conn->query("Select * from info where name='Cysto-urethroscope-sheath'");
+while($row=$res->fetch_assoc())
+    {   
+$cell1=$row['description'];
+echo $cell1;
+}?>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+
+                   
+ <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Optical Forceps</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-7">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://i01.i.aliimg.com/photo/v0/239124489/Optical_forceps.jpg" alt="Optical Forceps">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>Optical Forceps</h3>
+                <h4></h4>
+                <p>The robust construction of these rigid forceps provides
+a number of advantages as compared with a conventional
+flexible miniature forceps. <br>The specially designed
+sharp cutting jaws are close to the telescope,
+therefore specimens can be taken under accurate
+visual control.<br>These forceps have also been found valuable for the
+removal of foreign bodies and pieces of tissue. <br>Sufficient
+irrigation is still provided when a forceps is introduced
+into the sheath.<br><br><br>
+Features:<br>
+
+High operational efficiency<br>
+Application specific design<br>
+Better durability<br>
+
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+
+ <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefour">Urethral Sheath</a>
+                            </h4>
+                        </div>
+                        <div id="collapsefour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-5">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://3.imimg.com/data3/SF/JU/MY-2270998/cystoscope-sheath-250x250.jpg" alt="Urethral Sheath">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <h3>Urethral Sheath</h3>
+                <h4></h4>
+                <p>Designed as per prevailing quality standards, we offer our customers Urethral Sheath for the continuous irrigation with standard obturator,  21 fr. <br>Fabricated making use of superior quality raw material, this is highly durable and reliable in its use for various surgical operations. <br>Precision engineered by our expert professionals, this is light in weight, hygienic and safe to be used. <br>Offering the sheath at extremely cost effective prices makes our product highly demanded amongst our customer network.
+
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+
+
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapsefive">Visual Obturators, Cystoscope Adaptor</a>
+                            </h4>
+                        </div>
+                        <div id="collapsefive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-5">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://www.endoscopy.com/store/pc/catalog/cystosheaths_300x225.jpg" alt="Visual Obturators, Cystoscope Adaptor">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <h3>Visual Obturators, Cystoscope Adaptor</h3>
+                <h4></h4>
+                <p>
+                    
+                    
+                    Catering to the assorted necessities of our patrons, we are immersed in presenting a world-class compilation of Visual Obturator. Using optimal grade raw material and the contemporary techniques, this product is precisely made up by hard-working personnel as per the industry laid guidelines. As well, the presented product is inspected on predefined limitations of quality so as to present only flaw-free range from our end.<br>
+
+Features :<br>
+
+Fine finish<br>
+Durability<br>
+Precise design<br>
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse6">FLEX X2 URETHEROSCOPE</a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-7">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://cdn.dotmed.com/images/listingpics/1619805.jpg" alt="FLEX X2 URETHEROSCOPE">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>FLEX X2 URETHEROSCOPE</h3>
+                <h4></h4>
+                <p>
+                    
+                    
+                    This Storz Flex-X2 Fiberscope Ureteroscope specifications include :<br>
+<br>
+Deflection UP and DOWN : 270°(Can Achieve an S Curve to perform the contour of the kidney)
+<br>
+Tip Diameter : 2.2MM
+<br>
+Working Shaft Diameter : 7.5FR
+<br>
+Working Channel : 3.6FR
+<br>
+Working Length : 67.5CM<br>
+Condition: New<br>
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+
+
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse7">MINI PERC ( Mini Nephroscope )</a>
+                            </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-5">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://www.ultra-mini-pcnl.com/images/UMP-Ultra-Mini-PCNL-LUT.jpg" alt="MINI PERC ( Mini Nephroscope )">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <h3>MINI PERC ( Mini Nephroscope )</h3>
+                <h4></h4>
+                <p>
+                    Mini Perc is basically 12fr PCNL which can be connected to 15fr or 18fr external operating sheath.<br>
+                    Very handy instrument for the therapy of stones of the renal pelvis and staghorn calculi:
+Suitable for children and adults
+Minimal sheath size at highest stability
+Optimum handling
+Titanium and stainless steel construction for durability and low weight
+Automatic closure and sealing at the working channel
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+<div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse8">PCNL ( Universal Nephroscope )
+</a>
+                            </h4>
+                        </div>
+                        <div id="collapse8" class="panel-collapse collapse">
+                            <div class="panel-body">
+                               <div class="row">
+            <div class="col-md-7">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-hover" src="http://www.richard-wolf.com/fileadmin/default/user/images/Disciplines/Urology/Nephro.jpg" alt="FLEX X2 URETHEROSCOPE">
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3>PCNL ( Universal Nephroscope )
+</h3>
+                <h4></h4>
+                <p>
+                    PCNL Panaview operating telescope by marberger 25 degree with oval instrument channel for 4 mm auxiliary instruments, can also be used for irrigation or aspiration wl 195 mm. <br>
+<br>
+It comes in different size :
+<br>
+1) 15Fr<br>
+2) 21Fr<br>
+3) 24Fr<br>
+4) 27Fr<br>
+                    
+.</p>
+               
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+                <!-- /.panel-group -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
